@@ -21,7 +21,7 @@ app.use(express.json()); // analizo los requests con JSON
 
 
 //Servir archivos estaticos desde la carpeta Front
-app.use(express.static(path.join(__dirname, 'FRONT')));  //<-- AGREGADO
+app.use(express.static(path.join(__dirname, 'FRONT')));
 
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, 'FRONT', 'index.html'));

@@ -1,19 +1,17 @@
+
 const express = require("express")
 
 //controladores
-const {getCustomerById,getCustomers, createCustomer,
-    updateCustomer, deleteCustomer} = require ("../controllers/customersController.js")
+const customerController = require ("../controllers/customersController.js")
 
 //configuracion de rutas express, metodos HTTP
 
-const route = express.Router();
+const router = express.Router();
 
-route.get("/", getCustomers);
-route.get("/:id", getCustomerById);
-route.post("/", createCustomer);
-route.put("/:id", updateCustomer);
-route.delete("/:id", deleteCustomer);
+router.get("/", customerController.getCustomers);
+router.get("/:id",customerController.getCustomerById);
+router.post("/", customerController.createCustomer);
+router.put("/:id", customerController.updateCustomer);
+router.delete("/:id", customerController.deleteCustomer);
 
-
-
-module.exports = route;
+module.exports = router;
