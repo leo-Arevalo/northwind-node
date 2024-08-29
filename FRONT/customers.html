@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="customers.css">
+    <title>Customers Managment</title>
+</head>
+<body>
+    <h1>CUSTOMERS MANAGMENT</h1>
+
+    <div class="form-container">
+
+        <form id="customerForm">
+            <h2>Add/Edit Customer</h2>
+
+            <input type="hidden" name="customerId" id="customerId">
+
+            <label for="company">Company:</label>
+            <input type="text" id="company" name="company" required>
+
+            <label for="first_name">First Name:</label>
+            <input type="text" id="first_name" name="first_name" required>
+
+            <label for="last_name">Last Name:</label>
+            <input type="text" id="last_name" name="last_name" required>
+
+            <label for="email_address">Email Address:</label>
+            <input type="email" id="email_address" name="email_address" required>
+
+            <label for="job_title">Job Title:</label>
+            <input type="text" id="job_title" name="job_title">
+
+            <label for="business_phone">Business Phone:</label>
+            <input type="tel" id="business_phone" name="business_phone">
+
+            <label for="home_phone">Home Phone:</label>
+            <input type="tel" id="home_phone" name="home_phone">
+
+            <label for="mobile_phone">Mobile Phone:</label>
+            <input type="tel" id="mobile_phone" name="mobile_phone">
+
+            <label for="fax_number">Fax Number:</label>
+            <input type="tel" id="fax_number" name="fax_number">
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address"></textarea>
+
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city">
+
+            <label for="state_province">State/Province:</label>
+            <input type="text" id="state_province" name="state_province">
+
+            <label for="zip_postal_code">Zip/Postal Code:</label>
+            <input type="text" id="zip_postal_code" name="zip_postal_code">
+
+            <label for="country_region">Country/Region:</label>
+            <input type="text" id="country_region" name="country_region">
+
+            <label for="web_page">Web Page:</label>
+            <input type="url" id="web_page" name="web_page">
+
+            <label for="notes">Notes:</label>
+            <textarea id="notes" name="notes"></textarea>
+
+            <label for="attachments">Attachments:</label>
+            <input type="file" id="attachments" name="attachments">
+
+            <button type="submit">Save</button>
+        </form>
+    </div>
+
+    <div class="table-container">
+        <h2>Customer List</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="customerTableBody">
+                <!--Customer rows will be added here dynamically -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="./customers.js"></script>
+</body>
+</html>
